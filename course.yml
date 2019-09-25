@@ -1,0 +1,41 @@
+chunks:
+
+-
+    title: "Caregiver-Special-Skills"
+    id: caregiver
+    rules:
+    -
+        if_after: end_week 3
+        if_before: 2038-01-01 13:00:00 -5
+        weight: 100
+
+    -
+        weight: 0
+
+    content: |
+
+        # Dogwood Community E-learningへようこそ
+        ここで介護技能評価試験を学習し、特定技能試験に備えましょう。
+        <div class="well" markdown="1">
+        サンプル問題 [sample quiz](sample:quiz).
+        </div>
+
+-
+    title: "Caregiver Exam"
+
+    id: caregiver_exam
+    rules:
+    -
+        if_in_facility: test_center
+        if_after: 2015-06-01
+        weight: 1
+
+    -
+        shown: False
+        weight: 0
+
+    content: |
+
+        # Welcome to Caregiver Exam!
+
+        <a href="flow:exam-1" class="btn btn-default">Start exam &raquo;</a>
